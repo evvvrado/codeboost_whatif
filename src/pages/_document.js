@@ -1,4 +1,5 @@
 import { Html, Head, Main, NextScript } from 'next/document'
+import { getCssText } from "../styles"
 
 // import { Container } from './styles';
 
@@ -9,6 +10,10 @@ function Document() {
 				<link rel="preconnect" href="https://fonts.googleapis.com" />
 				<link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
 				<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swapf" rel="stylesheet" />
+
+				<style id="stitches" dangerouslySetInnerHTML={{ __html: getCssText() }}>
+
+				</style>
 			</Head>
 
 			<body>

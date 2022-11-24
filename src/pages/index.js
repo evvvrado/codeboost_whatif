@@ -1,5 +1,12 @@
+import Header from "../components/Header";
+import SectionHero from "../components/Home/sectionHero";
+import { ListCharacters } from "../components/listCharacters";
+
 export default function Home() {
 	return (
-		<h1>What If Codeboost</h1>
+		<>
+			<SectionHero></SectionHero>
+			<ListCharacters></ListCharacters>
+		</>
 	)
 }
