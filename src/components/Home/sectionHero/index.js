@@ -20,7 +20,7 @@ const socials = [
 	},
 ]
 
-function SectionHero() {
+function SectionHero({ data: { data } }) {
 	return (
 		<SectionHeroStyle>
 			<Container>
@@ -40,18 +40,18 @@ function SectionHero() {
 
 				<ContextText>
 					<div className="left">
-						<h3>COMING SOON</h3>
-						<h1>Marvel's WHAT IF… ?</h1>
+						<h3>{data.subtitlehero}</h3>
+						<h1>{data.titlehero}</h1>
 						<p>
-							Disponível no Disney+, What If… ? é uma série de animação que leva o público para um terreno desconhecido ao contar, de forma alternativa, momentos cruciais do Universo Cinematográfico Marvel, imaginando o que teria acontecido aos super-heróis se a história fosse totalmente diferente e se passasse em outra realidade.
+							{data.descriptionhero[0].text}
 						</p>
 
-						<a href="" target="_blank">
-							Saiba mais
+						<a href={data.urlbutton.url} target="_blank" rel="noreferrer">
+							{data.labelbutton}
 						</a>
 					</div>
 
-					<PopupVideo />
+					<PopupVideo label={data.labeltrailer} thumb={data.thumbnailtrailer.url} />
 				</ContextText>
 			</Container>
 		</SectionHeroStyle>

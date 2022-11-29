@@ -2,10 +2,10 @@ import Link from "next/link"
 import { StyleCard } from "./styles"
 import Image from "next/image"
 
-export function CardCharacter({ image, name }) {
+export function CardCharacter({ image, name, slug }) {
 	return (
 		<StyleCard>
-			<Link href="#">
+			<Link href={`/character/${slug}`}>
 				<div className="image">
 					<Image src={image} width={280} height={372} alt="Personagem" />
 				</div>

@@ -1,21 +1,14 @@
 import Image from "next/image"
+import { getPrismicClient } from "../../service/prismic"
 
 import { StyleListCharacters, StyleSectionCharacters } from "./styles"
 import { Container } from "../../styles/global"
 import LogoMarvel from "../../assets/logo.svg"
 
-import ImageCharacter from "../../assets/character.jpg"
 import { CardCharacter } from "../cardCharacter"
 
-const characters = [
-	{
-		name: "Killmonger",
-		image: ImageCharacter,
-		slug: "/killmonger",
-	},
-]
 
-export function ListCharacters() {
+export function ListCharacters({ list }) {
 	return (
 		<StyleSectionCharacters>
 			<Container>
@@ -25,12 +18,13 @@ export function ListCharacters() {
 				</div>
 
 				<StyleListCharacters>
-					{characters.map((character) => {
+					{list.map((character) => {
 						return (
 							<CardCharacter
-								key={character.name}
-								image={character.image}
-								name={character.name}
+								key={character.id}
+								image={character.data.image.url}
+								name={character.data.name}
+								slug={character.data.slug}
 							/>
 						)
 					})}

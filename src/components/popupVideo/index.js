@@ -3,12 +3,12 @@ import { StylePopUpVideo } from "./styles";
 
 import IconPlay from "../../assets/play.svg"
 
-export function PopupVideo() {
+export function PopupVideo({ label, thumb }) {
 	return (
 		<StylePopUpVideo>
-			<span>ASSISTA AO TRAILER</span>
+			<span>{label}</span>
 
-			<button>
+			<button style={{ background: `url(${thumb}) no-repeat center center` }}>
 				<div>
 					<Image src={IconPlay} alt="Icon play" />
 				</div>

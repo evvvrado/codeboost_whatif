@@ -1,5 +1,10 @@
+import { PageNotFound } from "../components/pageNotFound";
+
+import { PageTitle } from "../components/PageTitle"
 export default function Error() {
-	return (
-		<h1>Página não encontrada</h1>
-	)
+
+	return <>
+		<PageTitle title="Página não encontrada" description="Um projeto desenvolvido no curso Codeboost" />
+		<PageNotFound />
+	</>
 }

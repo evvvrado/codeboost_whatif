@@ -1,0 +1,33 @@
+{
+  "id": "mock-doc-id",
+  "url": null,
+  "type": "character",
+  "href": null,
+  "tags": [],
+  "first_publication_date": "1970-01-01T00:00:01+0000",
+  "last_publication_date": "1970-01-01T00:00:01+0000",
+  "slugs": [],
+  "linked_documents": [],
+  "lang": "en-us",
+  "alternate_languages": [],
+  "data": {
+    "image": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1545239351-1141bd82e8a6"
+    },
+    "name": "wing",
+    "slug": "believed",
+    "description": [
+      {
+        "type": "paragraph",
+        "text": "Cupidatat laboris fugiat est deserunt et ullamco tempor elit fugiat. Incididunt nisi in excepteur.",
+        "spans": []
+      }
+    ]
+  }
+}
